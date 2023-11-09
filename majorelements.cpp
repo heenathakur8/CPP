@@ -82,6 +82,9 @@ int main()
 			cnt1++;		//increments cnt1 each time elem is found in array
 		
 	}
-	cout<<cnt1;		       //displays frequency for elem 
+	if(cnt1>n/2)
+		cout<<cnt1;		       //displays frequency for elem when cnt>n/2
+	else
+		cout<<"-1";			//otherwise prints -1
 
 }
