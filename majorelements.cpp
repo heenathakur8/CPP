@@ -63,14 +63,14 @@ int main()
 	int elem=ar[0],cnt=0;
 	for(i=0;i<n;i++)
 	{
-		if(cnt==0)
+		if(cnt==0) 	//sets elem to value when cnt becomes/is 0 
 		{
 			cnt=1;
 			elem=ar[i];
 		}
-		else if(elem==ar[i]) 
+		else if(elem==ar[i]) 	//continues to increment cnt if the elem is same as the next occurence in array 
 			cnt++;
-		else
+		else			//decrements cnt when elem != array[i] if decrementing cnt makes cnt==0 first if is executed and elem value is changed 
 			cnt--;
 	}
 
@@ -78,10 +78,10 @@ int main()
 	int cnt1=0;
 	for(i=0;i<n;i++)
 	{
-		if(ar[i]==elem)
-			cnt1++;
+		if(ar[i]==elem)		//checks for the value that is last stored in elem (after cnt becomes 0)
+			cnt1++;		//increments cnt1 each time elem is found in array
 		
 	}
-	cout<<cnt1;
+	cout<<cnt1;		       //displays frequency for elem 
 
 }
