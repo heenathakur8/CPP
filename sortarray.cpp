@@ -75,9 +75,11 @@ int main()
 		{
 			swap(ar[mid],ar[high]);
 			high--;
+			
+		}
+		if(ar[mid]==1){
 			mid++;
 		}
-		mid++;
 	}
 	for(i=0;i<n;i++)
 		cout<<ar[i]<<" " ;

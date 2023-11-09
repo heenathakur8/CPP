@@ -63,8 +63,8 @@ int main()
 
 	//approach:4 takeuforward vali optimal 
 	int elem=ar[0],cnt=0;
-	for(i=0;i<n;i++)// this loop is in use to find out the max element if have any 
-	//suppose we don't have the majority elementwhich occurs more than n/2 times in the  array ,then we use second loop 
+	for(i=0;i<n;i++)// this loop is in use to find out the majority element if have any 
+	//suppose we don't have the majority element which occurs more than n/2 times in the  array ,then we use second loop 
 	// otherwise no need to run the second loop 
 	{
 		if(cnt==0)
@@ -86,7 +86,7 @@ int main()
 			cnt1++;
 		
 	}
-	if (cnt1 > (n / 2))
+	if (cnt1 > (n / 2))// we need to check this condition...
 	cout<<cnt1;
 	// or 
 	// return -1 or nothing...
