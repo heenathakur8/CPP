@@ -19,7 +19,8 @@ int main()
 	}
 	for(i=0;i<m+1;i++)
 	{
-		if(hash[i]>=n/2)//frequency greater or equal to n/2 
+		if(hash[i]>n/2)//frequency greater or equal to n/2 
+		// frequency of the element must be greater than n/2
 			cout<<i<<" "<<hash[i];// element and its frequency printed
 	}
 
@@ -35,9 +36,9 @@ int main()
 		mp[a]++;
 	}
 	auto itr = mp.begin();//iterator
-	for(itr = mp.begin(); itr != mp.end(); ++itr)//traversing 
+	for(; itr != mp.end(); ++itr)//traversing 
 	{
-		if(itr->second>=n/2)//checking if value >n/2 and printing 
+		if(itr->second>n/2)//checking if value >n/2 and printing 
 		cout<<itr->first<<" "<<itr->second;
 	}
 
@@ -51,7 +52,8 @@ int main()
 	for(i=0;i<n;i++)
 	{
 		cntr=count(ar,ar+n,ar[i]); //counting from ar[0] till ar[0+n] for ar[i]
-		if(cntr>=n/2)
+		// here complexity of of this count function is O(n).....
+		if(cntr>n/2)
 		{
 			cout<<ar[i]<<" "<<cntr<<endl;
 			break;
@@ -61,7 +63,9 @@ int main()
 
 	//approach:4 takeuforward vali optimal 
 	int elem=ar[0],cnt=0;
-	for(i=0;i<n;i++)
+	for(i=0;i<n;i++)// this loop is in use to find out the max element if have any 
+	//suppose we don't have the majority elementwhich occurs more than n/2 times in the  array ,then we use second loop 
+	// otherwise no need to run the second loop 
 	{
 		if(cnt==0)
 		{
@@ -76,12 +80,15 @@ int main()
 
 
 	int cnt1=0;
-	for(i=0;i<n;i++)
+	for(i=0;i<n;i++)// we use this loop to check ,the element we find in upper loop is occurs more than n/2 times or not ..
 	{
 		if(ar[i]==elem)
 			cnt1++;
 		
 	}
+	if (cnt1 > (n / 2))
 	cout<<cnt1;
+	// or 
+	// return -1 or nothing...
 
 }
