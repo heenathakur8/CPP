@@ -90,5 +90,7 @@ int main()
 	cout<<cnt1;
 	// or 
 	// return -1 or nothing...
+	else
+		cout<<"-1";
 
 }
