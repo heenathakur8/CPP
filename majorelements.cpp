@@ -67,14 +67,14 @@ int main()
 	//suppose we don't have the majority element which occurs more than n/2 times in the  array ,then we use second loop 
 	// otherwise no need to run the second loop 
 	{
-		if(cnt==0)
+		if(cnt==0) 	//sets elem to value when cnt becomes/is 0 
 		{
 			cnt=1;
 			elem=ar[i];
 		}
-		else if(elem==ar[i]) 
+		else if(elem==ar[i]) 	//continues to increment cnt if the elem is same as the next occurence in array 
 			cnt++;
-		else
+		else			//decrements cnt when elem != array[i] if decrementing cnt makes cnt==0 first if is executed and elem value is changed 
 			cnt--;
 	}
 
@@ -82,15 +82,17 @@ int main()
 	int cnt1=0;
 	for(i=0;i<n;i++)// we use this loop to check ,the element we find in upper loop is occurs more than n/2 times or not ..
 	{
-		if(ar[i]==elem)
-			cnt1++;
+		if(ar[i]==elem)		//checks for the value that is last stored in elem (after cnt becomes 0)
+			cnt1++;		//increments cnt1 each time elem is found in array
 		
 	}
+
 	if (cnt1 > (n / 2))// we need to check this condition...
 	cout<<cnt1;
 	// or 
 	// return -1 or nothing...
 	else
 		cout<<"-1";
+
 
 }
