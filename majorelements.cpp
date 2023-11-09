@@ -88,7 +88,7 @@ int main()
 	}
 
 	if (cnt1 > (n / 2))// we need to check this condition...
-	cout<<cnt1;
+	cout<<elem;
 	// or 
 	// return -1 or nothing...
 	else
