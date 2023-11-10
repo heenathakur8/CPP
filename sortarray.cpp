@@ -60,7 +60,7 @@ int main()
 	//approach 3: using high mid and low
 	//where ar[mid]=0 ,ar[low],ar[mid] are swapped and low++,mid++
 	//where ar[mid]=1,it is kept as it is and mid++
-	//where ar[mid]=2 it is swapped with ar[high] and high--
+	//where ar[mid]=2 it is swapped with ar[high] and high-- 
 	
 	int low=0,mid=0,high=n-1;
 	while(mid<=high)
@@ -75,9 +75,11 @@ int main()
 		{
 			swap(ar[mid],ar[high]);
 			high--;
+			
+		}
+		if(ar[mid]==1){
 			mid++;
 		}
-		mid++;
 	}
 	for(i=0;i<n;i++)
 		cout<<ar[i]<<" " ;
